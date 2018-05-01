@@ -16,9 +16,13 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var lowTemp: UILabel!
     @IBOutlet weak var highTemp: UILabel!
     
+    var apiManager = ApiManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        apiManager.shared.getWeather(latitude: <#T##Double#>, longitude: <#T##Double#>, onSuccess: <#T##(WeatherData) -> Void#>, onError: <#T##(Error) -> Void#>)
+        
         
     }
 
